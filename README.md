@@ -79,10 +79,9 @@ Para rodar os testes unitários:
 
 ## Postman
 
-A collection com todos os endpoints está disponível no projeto:
-```
-FavoritosAPI.postman_collection.json
-```
+A collection com todos os endpoints está disponível no projeto:  
+[FavoritosAPI.postman_collection.json](desafiotecnico/FavoritosAPI.postman_collection.json)
+
 
 ## Autor
 
