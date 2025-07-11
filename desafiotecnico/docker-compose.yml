@@ -1,0 +1,28 @@
+services:
+  db:
+    image: postgres:15
+    container_name: desafioaiqfome-db
+    environment:
+      POSTGRES_DB: desafiotecnico
+      POSTGRES_USER: juanribeiro
+      POSTGRES_PASSWORD: 123456
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  app:
+    build: .
+    container_name: desafioaiqfome-api
+    ports:
+      - "8080:8080"
+      - "8081:8081"
+    depends_on:
+      - db
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/desafiotecnico
+      SPRING_DATASOURCE_USERNAME: juanribeiro
+      SPRING_DATASOURCE_PASSWORD: 123456
+
+volumes:
+  pgdata:

@@ -1,0 +1,372 @@
+{
+	"info": {
+		"_postman_id": "5eb29628-6ceb-4c2a-b6ad-83bce40cef48",
+		"name": "DesafioAiQueFome",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28729218"
+	},
+	"item": [
+		{
+			"name": "Clientes",
+			"item": [
+				{
+					"name": "Criar cliente",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJlbWlsbHlzb3V6YTAxQGdtYWlsLmNvbSIsImlhdCI6MTc1MjE5MTU0NiwiZXhwIjoxNzUyMjc3OTQ2fQ.Wn78U58_JXZQM27cInx9JQwJPnB7EyYmv5rAKq7lAdw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nomeCompleto\": \"Maria Oliveira\",\n  \"email\": \"maria@teste5.com\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/clientes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar todos os clientes",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJlbWlsbHlzb3V6YTAxQGdtYWlsLmNvbSIsImlhdCI6MTc1MjE5MTU0NiwiZXhwIjoxNzUyMjc3OTQ2fQ.Wn78U58_JXZQM27cInx9JQwJPnB7EyYmv5rAKq7lAdw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/clientes?page=0&size=5&sort=nomeCompleto,asc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"clientes"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "5"
+								},
+								{
+									"key": "sort",
+									"value": "nomeCompleto,asc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar cliente por ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJlbWlsbHlzb3V6YTAxQGdtYWlsLmNvbSIsImlhdCI6MTc1MjE5MTU0NiwiZXhwIjoxNzUyMjc3OTQ2fQ.Wn78U58_JXZQM27cInx9JQwJPnB7EyYmv5rAKq7lAdw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/clientes/46",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"clientes",
+								"46"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar cliente por ID",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJlbWlsbHlzb3V6YTAxQGdtYWlsLmNvbSIsImlhdCI6MTc1MjE5MTU0NiwiZXhwIjoxNzUyMjc3OTQ2fQ.Wn78U58_JXZQM27cInx9JQwJPnB7EyYmv5rAKq7lAdw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nomeCompleto\": \"João Atualizado\",\n  \"email\": \"joao.novo3@example.com\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/clientes/45",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"clientes",
+								"45"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar cliente por ID",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJlbWlsbHlzb3V6YTAxQGdtYWlsLmNvbSIsImlhdCI6MTc1MjE5MTU0NiwiZXhwIjoxNzUyMjc3OTQ2fQ.Wn78U58_JXZQM27cInx9JQwJPnB7EyYmv5rAKq7lAdw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/clientes/46",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"clientes",
+								"46"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Favoritos",
+			"item": [
+				{
+					"name": "Adicionar favorito",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJlbWlsbHlzb3V6YTAxQGdtYWlsLmNvbSIsImlhdCI6MTc1MjE5MTU0NiwiZXhwIjoxNzUyMjc3OTQ2fQ.Wn78U58_JXZQM27cInx9JQwJPnB7EyYmv5rAKq7lAdw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"produtoId\": 6\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/clientes/45/favoritos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"clientes",
+								"45",
+								"favoritos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar favoritos do cliente",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJlbWlsbHlzb3V6YTAxQGdtYWlsLmNvbSIsImlhdCI6MTc1MjEyODU1MywiZXhwIjoxNzUyMjE0OTUzfQ.WimfFx762dnwK1kddyNAaH-KoRwI5nG3sLwNq-vHeR8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/clientes/4/favoritos?page=0&size=5&sort=produtoId,desc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"clientes",
+								"4",
+								"favoritos"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "5"
+								},
+								{
+									"key": "sort",
+									"value": "produtoId,desc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remover favorito",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJlbWlsbHlzb3V6YTAxQGdtYWlsLmNvbSIsImlhdCI6MTc1MjExOTc5MiwiZXhwIjoxNzUyMjA2MTkyfQ.piKdTy4YeLTC8xdCvzgl2Hbj76pe8_DgixDKCyEX4O8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/clientes/4/favoritos/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"clientes",
+								"4",
+								"favoritos",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Autenticacao",
+			"item": [
+				{
+					"name": "Registro de novo usuário",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"emillysouza01@gmail.com\",\n  \"senha\": \"Ecmm0102\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login para obter token JWT",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"emillysouza01@gmail.com\",\n  \"senha\": \"Ecmm0102\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
